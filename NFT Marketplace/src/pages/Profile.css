@@ -1,0 +1,563 @@
+/* =========================================================
+   USER PROFILE PAGE
+========================================================= */
+
+.user-profile-page {
+  max-width: 1220px;
+  margin-left: 149px;
+  margin-top: 100px;
+
+  color: #171717;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.user-profile-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.user-profile-header h1 {
+  margin: 0 0 5px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.user-profile-header p {
+  margin: 0;
+  color: #8a8a96;
+  font-size: 14px;
+}
+
+.user-profile-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #9999a5;
+}
+
+.user-profile-breadcrumb span:last-child {
+  color: #4d4d58;
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   TOP CONTENT
+========================================================= */
+
+.user-profile-top {
+  display: grid;
+  grid-template-columns: 370px minmax(0, 1fr);
+  gap: 14px;
+  align-items: start;
+}
+
+
+/* =========================================================
+   PROFILE CARD
+========================================================= */
+
+.user-profile-card {
+  padding: 18px;
+  box-sizing: border-box;
+
+  background: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #eeeeF3;
+}
+
+
+/* =========================================================
+   PROFILE USER
+========================================================= */
+
+.user-profile-user {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  padding-bottom: 20px;
+}
+
+.user-profile-user img {
+  width: 62px;
+  height: 62px;
+
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.user-profile-user h3 {
+  margin: 0 0 7px;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  color: #22222b;
+}
+
+.user-profile-user p {
+  margin: 0;
+
+  color: #9999a4;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   PROFILE OPTIONS
+========================================================= */
+
+.user-profile-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 13px 0;
+
+  border-top: 1px solid #f0f0f4;
+
+  color: #454550;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.user-profile-option-icon {
+  width: 28px;
+  height: 28px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  flex-shrink: 0;
+}
+
+.user-profile-green {
+  background: #e9f9ef;
+  color: #25a95a;
+}
+
+.user-profile-purple {
+  background: #f0ebff;
+  color: #7957d8;
+}
+
+
+/* =========================================================
+   FOLLOWING SECTION
+========================================================= */
+
+.user-following-section {
+  min-width: 0;
+}
+
+.user-following-section h2,
+.user-nft-section h2 {
+  margin: 0 0 14px;
+
+  font-size: 18px;
+  font-weight: 600;
+
+  color: #25252e;
+}
+
+
+/* =========================================================
+   FOLLOWING GRID
+========================================================= */
+
+.user-following-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 12px;
+}
+
+
+/* =========================================================
+   FOLLOWING CARD
+========================================================= */
+
+.user-following-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 12px;
+  min-width: 0;
+
+  padding: 13px;
+
+  background: #ffffff;
+  border: 1px solid #eeeeF3;
+  border-radius: 8px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   FOLLOWING USER
+========================================================= */
+
+.user-following-user {
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+  min-width: 0;
+}
+
+.user-following-user img {
+  width: 42px;
+  height: 42px;
+
+  border-radius: 50%;
+  object-fit: cover;
+
+  flex-shrink: 0;
+}
+
+.user-following-user h3 {
+  margin: 0 0 4px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  color: #292933;
+}
+
+.user-following-user p {
+  margin: 0;
+
+  font-size: 11px;
+  color: #9999a5;
+}
+
+
+/* =========================================================
+   UNFOLLOW BUTTON
+========================================================= */
+
+.user-following-card button {
+  border: 1px solid #e5e5eb;
+
+  background: #ffffff;
+  color: #777783;
+
+  border-radius: 5px;
+
+  padding: 7px 12px;
+
+  font-size: 11px;
+
+  cursor: pointer;
+  white-space: nowrap;
+
+  transition: all 0.2s ease;
+}
+
+.user-following-card button:hover {
+  background: #f5f3ff;
+
+  border-color: #8b6ce8;
+
+  color: #7657d5;
+}
+
+
+/* =========================================================
+   NFT SECTION
+========================================================= */
+
+.user-nft-section {
+  margin-top: 24px;
+}
+
+.user-nft-collections {
+  margin-top: 26px;
+}
+
+
+/* =========================================================
+   NFT GRID
+========================================================= */
+
+.user-nft-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 14px;
+}
+
+
+/* =========================================================
+   NFT CARD
+========================================================= */
+
+.user-nft-card {
+  background: #ffffff;
+
+  border: 1px solid #eeeeF3;
+  border-radius: 8px;
+
+  padding: 10px;
+
+  box-sizing: border-box;
+  overflow: hidden;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.user-nft-card:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+
+/* =========================================================
+   NFT IMAGE
+========================================================= */
+
+.user-nft-image-wrapper {
+  position: relative;
+
+  width: 100%;
+
+  aspect-ratio: 1 / 1;
+
+  overflow: hidden;
+
+  border-radius: 7px;
+
+  background: #f2f2f5;
+}
+
+.user-nft-image-wrapper > img:first-child {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+
+/* =========================================================
+   NFT PROFILE IMAGE
+========================================================= */
+
+.user-nft-profile {
+  position: absolute;
+  
+
+  left: 10px;
+  bottom: 10px;
+
+  width: 34px;
+  height: 34px;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+
+  border: 3px solid #ffffff;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   NFT TITLE
+========================================================= */
+
+.user-nft-card h3 {
+  margin: 11px 3px 3px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  color: #292933;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .user-profile-page {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  .user-profile-top {
+    grid-template-columns:
+      320px minmax(0, 1fr);
+  }
+
+  .user-following-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .user-nft-grid {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+  }
+}
+
+
+/* =========================================================
+   SMALL TABLET
+========================================================= */
+
+@media (max-width: 800px) {
+
+  .user-profile-page {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .user-profile-top {
+    grid-template-columns: 1fr;
+  }
+
+  .user-following-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .user-nft-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 560px) {
+
+  .user-profile-page {
+    margin: 20px 12px;
+  }
+
+  .user-profile-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 10px;
+  }
+
+  .user-profile-header h1 {
+    font-size: 21px;
+  }
+
+  .user-profile-breadcrumb {
+    font-size: 12px;
+  }
+
+  .user-profile-card {
+    padding: 14px;
+  }
+
+  .user-profile-user {
+    align-items: flex-start;
+  }
+
+  .user-profile-user img {
+    width: 52px;
+    height: 52px;
+  }
+
+  .user-profile-user h3 {
+    font-size: 14px;
+  }
+
+  .user-profile-user p {
+    font-size: 11px;
+  }
+
+  .user-following-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .user-following-card {
+    padding: 11px;
+  }
+
+  .user-nft-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+  }
+
+  .user-nft-card {
+    padding: 8px;
+  }
+
+  .user-nft-card h3 {
+    font-size: 13px;
+    margin-top: 8px;
+  }
+
+  .user-nft-profile {
+    width: 30px;
+    height: 30px;
+
+    left: 7px;
+    bottom: 7px;
+
+    border-width: 2px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .user-nft-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .user-following-card {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .user-following-card button {
+    width: 100%;
+  }
+}

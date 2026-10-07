@@ -1,0 +1,249 @@
+/* =========================================================
+   NAVBAR - DESKTOP
+========================================================= */
+
+.navbar {
+  width: calc(100% - 149px);
+  max-width: 1220px;
+  height: 80px;
+
+  margin-left: 149px;
+  padding-top: 30px;
+
+  box-sizing: border-box;
+
+  position: relative;
+  z-index: 100;
+}
+
+.navbar-content {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  box-sizing: border-box;
+}
+
+.search-input {
+  width: 380px;
+  height: 50px;
+
+  box-sizing: border-box;
+
+  padding: 0 20px;
+
+  background: #ffffff;
+
+  border: 1px solid #e6e8ec;
+  border-radius: 12px;
+
+  color: #68676e;
+
+  outline: none;
+}
+
+.search-input:focus {
+  border-color: #7048f8;
+}
+
+.navbar-icons {
+  display: flex;
+  align-items: center;
+
+  gap: 30px;
+}
+
+.nav-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  background: none;
+  border: none;
+
+  cursor: pointer;
+
+  font-size: 19px;
+}
+
+.nav-profile-img {
+  width: 43px;
+  height: 43px;
+
+  flex: 0 0 43px;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   TABLET - 768px
+========================================================= */
+
+@media screen and (max-width: 768px) {
+
+  .navbar {
+    width: calc(100% - 85px);
+
+    margin-left: 85px;
+
+    padding-top: 20px;
+  }
+
+  .search-input {
+    width: 280px;
+    height: 45px;
+
+    padding: 0 15px;
+
+    border-radius: 10px;
+  }
+
+  .navbar-icons {
+    gap: 20px;
+  }
+
+  .nav-btn {
+    font-size: 18px;
+  }
+
+  .nav-profile-img {
+    width: 40px;
+    height: 40px;
+
+    flex-basis: 40px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE - 480px
+========================================================= */
+
+@media screen and (max-width: 480px) {
+
+  .navbar {
+    width: 100%;
+    height: 65px;
+
+    margin-left: 0;
+
+    padding: 10px 12px 0;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+  }
+
+  .navbar-content {
+    width: 100%;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 10px;
+  }
+
+
+  /* =====================================================
+     SEARCH
+  ===================================================== */
+
+  .search-input {
+    flex: 1;
+
+    width: auto;
+    min-width: 0;
+    max-width: none;
+
+    height: 42px;
+
+    padding: 0 13px;
+
+    border-radius: 10px;
+
+    font-size: 13px;
+  }
+
+
+  /* =====================================================
+     NAVBAR ICONS
+  ===================================================== */
+
+  .navbar-icons {
+    display: flex;
+    align-items: center;
+
+    flex-shrink: 0;
+
+    gap: 0;
+  }
+
+
+  /* Hide navbar buttons */
+  .nav-btn {
+    display: none;
+  }
+
+
+  /* =====================================================
+     PROFILE
+  ===================================================== */
+
+  .nav-profile-img {
+    width: 40px;
+    height: 40px;
+
+    flex: 0 0 40px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE - 375px
+========================================================= */
+
+@media screen and (max-width: 375px) {
+
+  .navbar {
+    width: 100%;
+    height: 60px;
+
+    margin-left: 0;
+
+    padding: 8px 10px 0;
+  }
+
+  .navbar-content {
+    height: 50px;
+
+    gap: 8px;
+  }
+
+  .search-input {
+    height: 40px;
+
+    padding: 0 12px;
+
+    font-size: 13px;
+
+    border-radius: 9px;
+  }
+
+  .nav-profile-img {
+    width: 38px;
+    height: 38px;
+
+    flex: 0 0 38px;
+  }
+}

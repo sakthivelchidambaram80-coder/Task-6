@@ -1,0 +1,1285 @@
+/* =========================================================
+   SETTING PAGE
+========================================================= */
+
+.setting-page {
+  width: calc(100% - 149px);
+  max-width: 1220px;
+
+  margin-left: 149px;
+  margin-top: 100px;
+
+  padding: 0 0 50px;
+
+  box-sizing: border-box;
+
+  background: #f7f7f8;
+  color: #171717;
+
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+.setting-page *,
+.setting-page *::before,
+.setting-page *::after {
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.setting-header {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  gap: 20px;
+
+  margin-bottom: 50px;
+}
+
+.setting-header h1 {
+  margin: 0 0 5px;
+
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.setting-header p {
+  margin: 0;
+
+  font-size: 14px;
+  color: #777;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  margin-top: 2px;
+
+  font-size: 12px;
+
+  white-space: nowrap;
+}
+
+.breadcrumb span {
+  color: #8d8d8d;
+}
+
+.breadcrumb b {
+  color: #999;
+}
+
+.breadcrumb strong {
+  color: #777;
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   TABS
+========================================================= */
+
+.setting-tabs {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 25px;
+
+  margin-bottom: 30px;
+
+  padding-left: 2px;
+
+  overflow-x: auto;
+
+  scrollbar-width: none;
+}
+
+.setting-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.setting-tabs span {
+  position: relative;
+
+  flex-shrink: 0;
+
+  font-size: 14px;
+  color: #333;
+
+  cursor: pointer;
+
+  padding-bottom: 5px;
+}
+
+.setting-tabs span.active {
+  color: #6747ed;
+}
+
+.setting-tabs span.active::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 2px;
+
+  background: #6747ed;
+}
+
+
+/* =========================================================
+   PROFILE GRID
+========================================================= */
+
+.profile-grid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 1fr);
+
+  gap: 24px;
+
+  margin-bottom: 28px;
+}
+
+.profile-section {
+  min-width: 0;
+}
+
+.profile-section h2,
+.personal-section h2 {
+  margin: 0 0 10px;
+
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.profile-card {
+  width: 100%;
+  height: 245px;
+
+  background: #fff;
+
+  border-radius: 7px;
+
+  padding: 16px 12px 12px;
+}
+
+
+/* =========================================================
+   INPUTS
+========================================================= */
+
+.profile-input,
+.profile-card input,
+.input-group input {
+  width: 100%;
+  height: 40px;
+
+  border: 1px solid #cfcfcf;
+  border-radius: 5px;
+
+  outline: none;
+
+  background: #fff;
+
+  padding: 0 8px;
+
+  font-size: 14px;
+
+  margin-top: 10px;
+}
+
+.profile-input:focus,
+.profile-card input:focus,
+.input-group input:focus {
+  border-color: #6c4df6;
+}
+
+
+/* =========================================================
+   USER INFO
+========================================================= */
+
+.user-info {
+  display: flex;
+  align-items: center;
+
+  margin-top: 12px;
+
+  min-width: 0;
+}
+
+.user-icon {
+  width: 55px;
+  height: 55px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #4532dc;
+  color: #fff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-right: 8px;
+  margin-top: 10px;
+}
+
+.user-icon svg {
+  font-size: 18px;
+}
+
+.user-info h3 {
+  margin: 0;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.user-info p {
+  margin: 2px 0 0;
+
+  font-size: 12px;
+  color: #777;
+}
+
+
+/* =========================================================
+   UPDATE PROFILE
+========================================================= */
+
+.update-card {
+  padding-top: 11px;
+}
+
+.update-card label {
+  display: block;
+
+  margin-bottom: 5px;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.update-card input {
+  height: 40px;
+
+  margin-bottom: 7px;
+}
+
+
+/* =========================================================
+   SAVE BUTTON
+========================================================= */
+
+.save-btn {
+  border: none;
+  outline: none;
+
+  width: 91px;
+  height: 40px;
+
+  background: #6c4df6;
+  color: #fff;
+
+  border-radius: 5px;
+
+  padding: 6px 16px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  margin-top: 20px;
+
+  transition: 0.2s ease;
+}
+
+.save-btn:hover {
+  background: #5939df;
+}
+
+
+/* =========================================================
+   PERSONAL INFORMATION
+========================================================= */
+
+.personal-section {
+  width: 100%;
+
+  margin-top: 0;
+}
+
+.personal-card {
+  position: relative;
+
+  width: 100%;
+  min-height: 347px;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 1fr);
+
+  gap: 13px;
+
+  background: #fff;
+
+  border-radius: 7px;
+
+  padding: 13px 12px 60px;
+}
+
+.personal-column {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 9px;
+}
+
+.input-group {
+  width: 100%;
+}
+
+.input-group label {
+  display: block;
+
+  margin-bottom: 5px;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.input-group input {
+  height: 40px;
+}
+
+.personal-save {
+  position: absolute;
+
+  left: 12px;
+  bottom: 10px;
+}
+
+
+/* =========================================================
+   LARGE TABLET - 1200px
+========================================================= */
+
+@media (max-width: 1200px) {
+
+  .setting-page {
+    width: calc(100% - 120px);
+
+    margin-left: 120px;
+
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .profile-grid {
+    gap: 18px;
+  }
+
+  .setting-tabs {
+    gap: 20px;
+  }
+
+  .profile-card {
+    height: 245px;
+  }
+}
+
+
+/* =========================================================
+   TABLET - 1024px
+========================================================= */
+
+@media (max-width: 1024px) {
+
+  .setting-page {
+    width: calc(100% - 80px);
+
+    margin-left: 80px;
+
+    margin-top: 85px;
+
+    padding: 20px;
+  }
+
+  .setting-header {
+    margin-bottom: 35px;
+  }
+
+  .setting-header h1 {
+    font-size: 23px;
+  }
+
+  .setting-header p {
+    font-size: 13px;
+  }
+
+  .setting-tabs {
+    gap: 20px;
+
+    margin-bottom: 25px;
+  }
+
+  .setting-tabs span {
+    font-size: 13px;
+  }
+
+  .profile-grid {
+    gap: 18px;
+  }
+
+  .profile-section h2,
+  .personal-section h2 {
+    font-size: 17px;
+  }
+
+  .profile-card {
+    height: 235px;
+
+    padding: 14px 11px;
+  }
+
+  .personal-card {
+    min-height: 340px;
+  }
+}
+
+
+/* =========================================================
+   TABLET - 900px
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .setting-page {
+    width: calc(100% - 70px);
+
+    margin-left: 70px;
+  }
+
+  .profile-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-card {
+    height: auto;
+
+    min-height: 210px;
+  }
+
+  .personal-card {
+    min-height: 350px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE / SMALL TABLET - 768px
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .setting-page {
+    width: 100%;
+
+    margin-left: 0;
+    margin-top: 70px;
+
+    padding: 25px 20px 40px;
+
+    overflow-x: hidden;
+  }
+
+  /* HEADER */
+
+  .setting-header {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+    margin-bottom: 30px;
+  }
+
+  .setting-header h1 {
+    font-size: 22px;
+  }
+
+  .setting-header p {
+    font-size: 13px;
+  }
+
+  .breadcrumb {
+    margin-top: 0;
+
+    font-size: 11px;
+  }
+
+
+  /* TABS */
+
+  .setting-tabs {
+    width: 100%;
+
+    gap: 22px;
+
+    margin-bottom: 25px;
+
+    padding-left: 0;
+    padding-bottom: 5px;
+  }
+
+  .setting-tabs span {
+    font-size: 12px;
+  }
+
+
+  /* PROFILE */
+
+  .profile-grid {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 22px;
+
+    margin-bottom: 25px;
+  }
+
+  .profile-section h2,
+  .personal-section h2 {
+    font-size: 17px;
+
+    margin-bottom: 9px;
+  }
+
+  .profile-card {
+    width: 100%;
+
+    height: auto;
+
+    min-height: 210px;
+
+    padding: 14px 12px;
+  }
+
+
+  /* PERSONAL */
+
+  .personal-section {
+    width: 100%;
+  }
+
+  .personal-card {
+    width: 100%;
+
+    grid-template-columns: 1fr;
+
+    gap: 15px;
+
+    min-height: 520px;
+
+    padding: 14px 12px 60px;
+  }
+
+  .personal-column {
+    gap: 10px;
+  }
+
+  .personal-save {
+    left: 12px;
+    bottom: 10px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE - 600px
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .setting-page {
+    margin-top: 65px;
+
+    padding: 20px 15px 35px;
+  }
+
+  /* HEADER */
+
+  .setting-header {
+    margin-bottom: 22px;
+
+    gap: 8px;
+  }
+
+  .setting-header h1 {
+    font-size: 21px;
+
+    margin-bottom: 4px;
+  }
+
+  .setting-header p {
+    font-size: 12px;
+  }
+
+  .breadcrumb {
+    font-size: 10px;
+
+    gap: 6px;
+  }
+
+
+  /* TABS */
+
+  .setting-tabs {
+    gap: 18px;
+
+    margin-bottom: 22px;
+  }
+
+  .setting-tabs span {
+    font-size: 11px;
+
+    padding-bottom: 6px;
+  }
+
+
+  /* PROFILE */
+
+  .profile-grid {
+    gap: 20px;
+
+    margin-bottom: 22px;
+  }
+
+  .profile-section h2,
+  .personal-section h2 {
+    font-size: 16px;
+
+    margin-bottom: 8px;
+  }
+
+  .profile-card {
+    min-height: 195px;
+
+    padding: 12px 11px;
+  }
+
+  .profile-input,
+  .profile-card input,
+  .input-group input {
+    height: 36px;
+
+    font-size: 12px;
+  }
+
+
+  /* USER */
+
+  .user-info {
+    margin-top: 10px;
+  }
+
+  .user-icon {
+    width: 45px;
+    height: 45px;
+
+    margin-top: 7px;
+  }
+
+  .user-icon svg {
+    font-size: 16px;
+  }
+
+  .user-info h3 {
+    font-size: 12px;
+  }
+
+  .user-info p {
+    font-size: 10px;
+  }
+
+
+  /* UPDATE */
+
+  .update-card {
+    min-height: 190px;
+
+    padding-top: 11px;
+  }
+
+  .update-card label {
+    font-size: 12px;
+  }
+
+  .update-card input {
+    height: 36px;
+
+    margin-bottom: 6px;
+  }
+
+
+  /* BUTTON */
+
+  .save-btn {
+    width: 82px;
+    height: 36px;
+
+    margin-top: 15px;
+
+    font-size: 11px;
+  }
+
+
+  /* PERSONAL */
+
+  .personal-card {
+    min-height: 500px;
+
+    padding: 12px 11px 55px;
+
+    gap: 12px;
+  }
+
+  .personal-column {
+    gap: 9px;
+  }
+
+  .input-group label {
+    font-size: 11px;
+  }
+
+  .input-group input {
+    height: 36px;
+
+    margin-top: 7px;
+  }
+
+  .personal-save {
+    left: 11px;
+    bottom: 9px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE - 480px
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .setting-page {
+    margin-top: 60px;
+
+    padding: 18px 12px 30px;
+  }
+
+  /* HEADER */
+
+  .setting-header {
+    margin-bottom: 18px;
+  }
+
+  .setting-header h1 {
+    font-size: 20px;
+  }
+
+  .setting-header p {
+    font-size: 11px;
+  }
+
+  .breadcrumb {
+    font-size: 9px;
+
+    gap: 5px;
+  }
+
+
+  /* TABS */
+
+  .setting-tabs {
+    gap: 16px;
+
+    margin-bottom: 20px;
+  }
+
+  .setting-tabs span {
+    font-size: 10px;
+  }
+
+
+  /* PROFILE */
+
+  .profile-grid {
+    gap: 18px;
+
+    margin-bottom: 20px;
+  }
+
+  .profile-section h2,
+  .personal-section h2 {
+    font-size: 15px;
+  }
+
+  .profile-card {
+    min-height: 180px;
+
+    padding: 11px 10px;
+  }
+
+  .profile-input,
+  .profile-card input {
+    height: 33px;
+
+    font-size: 11px;
+
+    margin-top: 8px;
+  }
+
+
+  /* USER */
+
+  .user-info {
+    margin-top: 8px;
+  }
+
+  .user-icon {
+    width: 40px;
+    height: 40px;
+
+    margin-right: 7px;
+  }
+
+  .user-icon svg {
+    font-size: 14px;
+  }
+
+  .user-info h3 {
+    font-size: 11px;
+  }
+
+  .user-info p {
+    font-size: 9px;
+  }
+
+
+  /* UPDATE */
+
+  .update-card {
+    min-height: 175px;
+  }
+
+  .update-card label {
+    font-size: 10px;
+
+    margin-bottom: 4px;
+  }
+
+  .update-card input {
+    height: 33px;
+
+    margin-bottom: 5px;
+  }
+
+
+  /* BUTTON */
+
+  .save-btn {
+    width: 75px;
+    height: 33px;
+
+    padding: 5px 12px;
+
+    font-size: 10px;
+
+    margin-top: 12px;
+  }
+
+
+  /* PERSONAL */
+
+  .personal-card {
+    min-height: 475px;
+
+    padding: 11px 10px 52px;
+
+    gap: 11px;
+  }
+
+  .personal-column {
+    gap: 8px;
+  }
+
+  .input-group label {
+    font-size: 10px;
+
+    margin-bottom: 3px;
+  }
+
+  .input-group input {
+    height: 33px;
+
+    margin-top: 5px;
+  }
+
+  .personal-save {
+    left: 10px;
+    bottom: 9px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE - 375px
+========================================================= */
+
+@media (max-width: 375px) {
+
+  .setting-page {
+    width: 100%;
+
+    margin: 0;
+
+    margin-top: 60px;
+
+    padding: 14px 10px 28px;
+
+    overflow-x: hidden;
+  }
+
+
+  /* HEADER */
+
+  .setting-header {
+    margin-bottom: 18px;
+
+    gap: 7px;
+  }
+
+  .setting-header h1 {
+    font-size: 20px;
+
+    margin-bottom: 3px;
+  }
+
+  .setting-header p {
+    font-size: 11px;
+  }
+
+  .breadcrumb {
+    font-size: 9px;
+
+    gap: 5px;
+  }
+
+
+  /* TABS */
+
+  .setting-tabs {
+    width: 100%;
+
+    display: flex;
+
+    gap: 0;
+
+    justify-content: flex-start;
+
+    overflow-x: auto;
+
+    padding: 0 0 6px;
+
+    margin-bottom: 20px;
+  }
+
+  .setting-tabs span {
+    flex-shrink: 0;
+
+    font-size: 10px;
+
+    margin-right: 18px;
+
+    padding-bottom: 5px;
+  }
+
+
+  /* PROFILE */
+
+  .profile-grid {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+
+    margin-bottom: 20px;
+  }
+
+  .profile-section h2,
+  .personal-section h2 {
+    font-size: 15px;
+
+    font-weight: 700;
+
+    margin-bottom: 7px;
+  }
+
+  .profile-card {
+    width: 100%;
+
+    height: auto;
+
+    min-height: 170px;
+
+    padding: 11px 10px;
+  }
+
+
+  /* USER PROFILE */
+
+  .profile-input {
+    width: 100%;
+
+    height: 30px;
+
+    margin-top: 0;
+  }
+
+  .user-info {
+    margin-top: 9px;
+  }
+
+  .user-icon {
+    width: 35px;
+    height: 35px;
+
+    margin-right: 7px;
+
+    margin-top: 4px;
+  }
+
+  .user-icon svg {
+    font-size: 14px;
+  }
+
+  .user-info h3 {
+    font-size: 10px;
+  }
+
+  .user-info p {
+    font-size: 8px;
+
+    margin-top: 2px;
+  }
+
+
+  /* UPDATE PROFILE */
+
+  .update-card {
+    min-height: 175px;
+
+    padding-top: 10px;
+  }
+
+  .update-card label {
+    font-size: 10px;
+
+    margin-bottom: 3px;
+  }
+
+  .update-card input {
+    width: 100%;
+
+    height: 30px;
+
+    margin-top: 5px;
+
+    margin-bottom: 6px;
+  }
+
+
+  /* SAVE */
+
+  .save-btn {
+    width: 72px;
+    height: 31px;
+
+    padding: 5px 12px;
+
+    font-size: 9px;
+
+    margin-top: 10px;
+  }
+
+
+  /* PERSONAL INFORMATION */
+
+  .personal-section {
+    width: 100%;
+
+    margin-top: 3px;
+  }
+
+  .personal-card {
+    width: 100%;
+
+    min-height: 465px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    padding: 11px 10px 50px;
+  }
+
+  .personal-column {
+    width: 100%;
+
+    gap: 8px;
+  }
+
+  .input-group {
+    width: 100%;
+  }
+
+  .input-group label {
+    font-size: 10px;
+
+    margin-bottom: 3px;
+  }
+
+  .input-group input {
+    width: 100%;
+
+    height: 30px;
+
+    margin-top: 4px;
+  }
+
+  .personal-save {
+    left: 10px;
+    bottom: 9px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE - 360px
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .setting-page {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .setting-header h1 {
+    font-size: 19px;
+  }
+
+  .setting-header p {
+    font-size: 10px;
+  }
+
+  .breadcrumb {
+    font-size: 8px;
+  }
+
+  .setting-tabs {
+    gap: 0;
+  }
+
+  .setting-tabs span {
+    font-size: 9px;
+
+    margin-right: 15px;
+  }
+
+  .profile-section h2,
+  .personal-section h2 {
+    font-size: 14px;
+  }
+
+  .profile-card {
+    padding: 10px 9px;
+
+    min-height: 165px;
+  }
+
+  .profile-input,
+  .profile-card input,
+  .input-group input {
+    height: 29px;
+
+    font-size: 10px;
+  }
+
+  .user-icon {
+    width: 33px;
+    height: 33px;
+  }
+
+  .user-info h3 {
+    font-size: 9px;
+  }
+
+  .user-info p {
+    font-size: 7px;
+  }
+
+  .update-card label,
+  .input-group label {
+    font-size: 9px;
+  }
+
+  .save-btn {
+    width: 68px;
+    height: 30px;
+
+    font-size: 8px;
+  }
+
+  .personal-card {
+    min-height: 450px;
+
+    padding-left: 9px;
+    padding-right: 9px;
+  }
+
+  .personal-save {
+    left: 9px;
+  }
+}

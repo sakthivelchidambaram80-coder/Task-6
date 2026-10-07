@@ -1,0 +1,827 @@
+/* =========================================================
+   COLLECTIONS SECTION
+========================================================= */
+
+.collections-section {
+  width: calc(100% - 149px);
+  max-width: 1220px;
+  margin-left: 149px;
+  margin-top: 100px;
+  padding: 0;
+  box-sizing: border-box;
+
+  background: #f7f7f8;
+  color: #171717;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+/* =========================================================
+   BREADCRUMB
+========================================================= */
+
+.collections-breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 25px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.collections-breadcrumb span {
+  color: #8c8ca1;
+}
+
+.collections-breadcrumb b {
+  color: #aaa;
+  font-size: 14px;
+}
+
+.collections-breadcrumb strong {
+  color: #777;
+  font-weight: 500;
+}
+
+.sub {
+  font-size: 12px;
+  color: #000;
+  font-family: sans-serif;
+}
+
+/* =========================================================
+   COLLECTIONS HEADER
+========================================================= */
+
+.collections-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 25px;
+  box-sizing: border-box;
+}
+
+.collections-header h2 {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.3;
+  font-weight: 700;
+  color: #111;
+}
+
+/* =========================================================
+   FILTER TABS
+========================================================= */
+
+.collections-filter-tabs {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 40px;
+}
+
+.collections-filter-tabs button {
+  flex: 0 0 auto;
+  background: transparent;
+  border: none;
+  outline: none;
+
+  color: #111;
+  padding: 7px 15px;
+
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.3;
+
+  border-radius: 20px;
+  cursor: pointer;
+  white-space: nowrap;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.collections-filter-tabs button:hover {
+  background: #eeeaff;
+}
+
+.collections-filter-tabs .collections-filter-active {
+  background: #7048f8;
+  color: #fff;
+}
+
+/* =========================================================
+   NFT GRID
+========================================================= */
+
+.collections-nft-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   NFT CARD
+========================================================= */
+
+.collections-nft-card {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+
+  background: #fff;
+  border-radius: 18px;
+  padding: 18px;
+
+  box-sizing: border-box;
+  overflow: hidden;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.collections-nft-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.07);
+}
+
+/* =========================================================
+   NFT IMAGE
+========================================================= */
+
+.collections-nft-image-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 17px;
+}
+
+.collections-nft-image {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+
+  aspect-ratio: 1 / 0.82;
+  object-fit: cover;
+
+  transition: transform 0.35s ease;
+}
+
+.collections-nft-card:hover .collections-nft-image {
+  transform: scale(1.04);
+}
+
+/* =========================================================
+   NFT DETAILS
+========================================================= */
+
+.collections-nft-details {
+  width: 100%;
+  padding-top: 20px;
+  box-sizing: border-box;
+}
+
+.collections-nft-details h3 {
+  margin: 0 0 16px;
+
+  font-size: 18px;
+  line-height: 1.3;
+  font-weight: 700;
+
+  color: #111;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* =========================================================
+   NFT INFO
+========================================================= */
+
+.collections-nft-info {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 10px;
+
+  box-sizing: border-box;
+}
+
+.collections-auction,
+.collections-current-bid {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.collections-auction span,
+.collections-current-bid span {
+  font-size: 12px;
+  line-height: 1.3;
+  color: #222;
+}
+
+.collections-auction strong,
+.collections-current-bid strong {
+  font-size: 13px;
+  line-height: 1.3;
+  font-weight: 500;
+  color: #68799f;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.collections-current-bid {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.collections-current-bid .collections-purple-text {
+  color: #7048f8;
+}
+
+/* =========================================================
+   PLACE BID BUTTON
+========================================================= */
+
+.collections-place-bid {
+  display: block;
+  width: 100%;
+  height: 40px;
+
+  margin-top: 23px;
+  padding: 0 12px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #7048f8;
+  color: #fff;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    transform 0.2s ease;
+}
+
+.collections-place-bid:hover {
+  background: #6038e8;
+}
+
+.collections-place-bid:active {
+  transform: scale(0.98);
+}
+
+/* =========================================================
+   RESPONSIVE COLLECTIONS
+   1440px DESKTOP DESIGN IS NOT CHANGED
+========================================================= */
+
+
+/* =========================================================
+   1200px - SMALL DESKTOP
+========================================================= */
+
+@media (max-width: 1200px) {
+
+  .collections-section {
+    width: calc(100% - 110px);
+    margin-left: 110px;
+    margin-top: 80px;
+  }
+
+  .collections-nft-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+}
+
+
+/* =========================================================
+   1024px - TABLET / LAPTOP
+========================================================= */
+
+@media (max-width: 1024px) {
+
+  .collections-section {
+    width: calc(100% - 80px);
+    margin-left: 80px;
+    margin-top: 70px;
+    padding: 0 20px;
+  }
+
+  .collections-breadcrumb {
+    margin-bottom: 22px;
+  }
+
+  .collections-header {
+    margin-bottom: 22px;
+  }
+
+  .collections-filter-tabs {
+    margin-bottom: 32px;
+  }
+
+  .collections-nft-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .collections-nft-card {
+    padding: 15px;
+    border-radius: 16px;
+  }
+
+  .collections-nft-image-wrapper {
+    border-radius: 14px;
+  }
+
+  .collections-nft-details {
+    padding-top: 17px;
+  }
+
+  .collections-nft-details h3 {
+    font-size: 16px;
+    margin-bottom: 14px;
+  }
+
+  .collections-auction span,
+  .collections-current-bid span {
+    font-size: 11px;
+  }
+
+  .collections-auction strong,
+  .collections-current-bid strong {
+    font-size: 12px;
+  }
+
+  .collections-place-bid {
+    height: 40px;
+    margin-top: 20px;
+    font-size: 13px;
+  }
+
+}
+
+
+/* =========================================================
+   900px - TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .collections-section {
+    width: calc(100% - 60px);
+    margin-left: 60px;
+    padding: 0 18px;
+  }
+
+  .collections-nft-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+}
+
+
+/* =========================================================
+   768px - TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .collections-section {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 70px;
+    padding: 0 18px 40px;
+  }
+
+  .collections-breadcrumb {
+    margin-bottom: 20px;
+    font-size: 13px;
+  }
+
+  .collections-header {
+    margin-bottom: 20px;
+  }
+
+  .collections-header h2 {
+    font-size: 19px;
+  }
+
+  .collections-filter-tabs {
+    gap: 4px;
+    margin-bottom: 30px;
+
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .collections-filter-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .collections-filter-tabs button {
+    flex: 0 0 auto;
+    padding: 7px 13px;
+    font-size: 13px;
+  }
+
+  .collections-nft-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .collections-nft-card {
+    padding: 14px;
+    border-radius: 15px;
+  }
+
+  .collections-nft-image-wrapper {
+    border-radius: 13px;
+  }
+
+  .collections-nft-details {
+    padding-top: 16px;
+  }
+
+  .collections-nft-details h3 {
+    font-size: 16px;
+    margin-bottom: 13px;
+  }
+
+  .collections-auction span,
+  .collections-current-bid span {
+    font-size: 11px;
+  }
+
+  .collections-auction strong,
+  .collections-current-bid strong {
+    font-size: 12px;
+  }
+
+}
+
+
+/* =========================================================
+   600px - SMALL TABLET / LARGE MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .collections-section {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 60px;
+    padding: 0 15px 35px;
+  }
+
+  .collections-breadcrumb {
+    font-size: 12px;
+    gap: 6px;
+  }
+
+  .collections-header {
+    width: 100%;
+    margin-bottom: 18px;
+  }
+
+  .collections-header h2 {
+    font-size: 18px;
+  }
+
+  .collections-filter-tabs {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+  .collections-filter-tabs button {
+    padding: 7px 12px;
+    font-size: 12px;
+  }
+
+  .collections-nft-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .collections-nft-card {
+    padding: 14px;
+    border-radius: 15px;
+  }
+
+  .collections-nft-image-wrapper {
+    border-radius: 13px;
+  }
+
+  .collections-nft-image {
+    width: 100%;
+    aspect-ratio: 1 / 0.78;
+    object-fit: cover;
+  }
+
+  .collections-nft-details {
+    padding-top: 16px;
+  }
+
+  .collections-nft-details h3 {
+    font-size: 17px;
+    margin-bottom: 14px;
+  }
+
+  .collections-nft-info {
+    gap: 8px;
+  }
+
+  .collections-auction,
+  .collections-current-bid {
+    gap: 5px;
+  }
+
+  .collections-auction span,
+  .collections-current-bid span {
+    font-size: 11px;
+  }
+
+  .collections-auction strong,
+  .collections-current-bid strong {
+    font-size: 12px;
+  }
+
+  .collections-place-bid {
+    height: 42px;
+    margin-top: 20px;
+    font-size: 13px;
+  }
+
+}
+
+
+/* =========================================================
+   480px - MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .collections-section {
+    width: 100%;
+    max-width: 100%;
+    margin: 55px 0 0;
+    padding: 0 15px 30px;
+  }
+
+  .collections-breadcrumb {
+    font-size: 12px;
+    gap: 5px;
+    margin-bottom: 18px;
+  }
+
+  .collections-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 17px;
+  }
+
+  .collections-header h2 {
+    font-size: 18px;
+  }
+
+  .collections-filter-tabs {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 4px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    margin-bottom: 24px;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .collections-filter-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .collections-filter-tabs button {
+    flex: 0 0 auto;
+    padding: 7px 12px;
+    font-size: 12px;
+  }
+
+  .collections-nft-grid {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .collections-nft-card {
+    width: 100%;
+    padding: 14px;
+    border-radius: 15px;
+  }
+
+  .collections-nft-image-wrapper {
+    width: 100%;
+    border-radius: 13px;
+  }
+
+  .collections-nft-image {
+    width: 100%;
+    aspect-ratio: 1 / 0.78;
+  }
+
+  .collections-nft-details {
+    padding-top: 16px;
+  }
+
+  .collections-nft-details h3 {
+    font-size: 17px;
+    margin-bottom: 14px;
+  }
+
+  .collections-nft-info {
+    gap: 8px;
+  }
+
+  .collections-place-bid {
+    height: 42px;
+    margin-top: 20px;
+    font-size: 13px;
+  }
+
+}
+
+
+/* =========================================================
+   375px - SMALL MOBILE
+========================================================= */
+
+@media (max-width: 375px) {
+
+  .collections-section {
+    margin-top: 50px;
+    padding: 0 12px 25px;
+  }
+
+  .collections-breadcrumb {
+    font-size: 11px;
+    gap: 5px;
+    margin-bottom: 16px;
+  }
+
+  .collections-header {
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+
+  .collections-header h2 {
+    font-size: 17px;
+  }
+
+  .collections-filter-tabs {
+    gap: 3px;
+    margin-bottom: 22px;
+  }
+
+  .collections-filter-tabs button {
+    padding: 6px 10px;
+    font-size: 11px;
+  }
+
+  .collections-nft-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .collections-nft-card {
+    padding: 12px;
+    border-radius: 14px;
+  }
+
+  .collections-nft-image-wrapper {
+    border-radius: 11px;
+  }
+
+  .collections-nft-image {
+    aspect-ratio: 1 / 0.78;
+  }
+
+  .collections-nft-details {
+    padding-top: 14px;
+  }
+
+  .collections-nft-details h3 {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  .collections-nft-info {
+    gap: 7px;
+  }
+
+  .collections-auction,
+  .collections-current-bid {
+    gap: 4px;
+  }
+
+  .collections-auction span,
+  .collections-current-bid span {
+    font-size: 10px;
+  }
+
+  .collections-auction strong,
+  .collections-current-bid strong {
+    font-size: 11px;
+  }
+
+  .collections-place-bid {
+    height: 40px;
+    margin-top: 18px;
+    font-size: 12px;
+  }
+
+}
+
+
+/* =========================================================
+   360px - VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .collections-section {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 45px;
+  }
+
+  .collections-breadcrumb {
+    font-size: 10px;
+  }
+
+  .collections-header h2 {
+    font-size: 16px;
+  }
+
+  .collections-filter-tabs button {
+    padding: 6px 9px;
+    font-size: 10px;
+  }
+
+  .collections-nft-card {
+    padding: 10px;
+    border-radius: 13px;
+  }
+
+  .collections-nft-image-wrapper {
+    border-radius: 10px;
+  }
+
+  .collections-nft-details {
+    padding-top: 13px;
+  }
+
+  .collections-nft-details h3 {
+    font-size: 15px;
+  }
+
+  .collections-place-bid {
+    height: 39px;
+    font-size: 11px;
+  }
+
+}

@@ -1,0 +1,179 @@
+.slidebar {
+  width: 80px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  background: #ffffff;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 30px 0;
+  box-sizing: border-box;
+
+  z-index: 100;
+}
+
+.slidebar-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-top: 40px;
+  gap: 40px;
+}
+
+.create-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  font-size: 19px;
+}
+
+.create-btn:hover {
+  color: #6f4ff2;
+}
+
+.slidebar-footer {
+  margin-top: auto;
+}
+
+
+/* =========================================================
+   MOBILE
+   Fixed Bottom Navigation
+========================================================= */
+
+@media screen and (max-width: 480px) {
+
+  .slidebar {
+    width: 424px;
+    height: 60px;
+
+    position: fixed;
+    top: auto;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    padding: 0;
+
+    background: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-top: 1px solid #eeeeee;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.06);
+
+    z-index: 9999;
+    
+  }
+
+  /* Hide logo */
+  .slidebar-logo {
+    display: none !important;
+  }
+
+  /* Navigation */
+  .slidebar-items {
+    width: auto;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0;
+    padding: 0;
+
+    gap: 10px;
+  }
+
+  .slidebar-items a {
+    flex: none;
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+  }
+
+  /* Icons */
+  .create-btn {
+    width: 42px;
+    height: 42px;
+
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: transparent;
+    border: none;
+
+    font-size: 20px;
+    color: #555555;
+  }
+
+  .create-btn:hover {
+    color: #6f4ff2;
+  }
+
+  /* Hide logout */
+  .slidebar-footer {
+    display: none !important;
+  }
+}
+
+
+/* =========================================================
+   375px MOBILE
+========================================================= */
+
+@media screen and (max-width: 375px) {
+
+  .slidebar {
+    height: 58px;
+   max-width:424px ;
+   
+  }
+
+  .slidebar-items {
+    
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+  }
+
+  .slidebar-items a {
+    flex: none;
+
+    width: 52px;
+    height: 52px;
+  }
+
+  .create-btn {
+    width: 40px;
+    height: 40px;
+
+    padding: 0;
+    margin: 0;
+
+    font-size: 19px;
+  }
+}

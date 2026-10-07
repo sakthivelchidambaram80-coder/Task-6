@@ -1,0 +1,1614 @@
+/* =========================================================
+   BIDS PAGE
+========================================================= */
+
+.bids-page {
+  width: calc(100% - 149px);
+  max-width: 1220px;
+
+  margin-left: 149px;
+  margin-top: 80px;
+
+  padding-bottom: 50px;
+
+  background: #f5f5f5;
+  color: #202020;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.bids-header {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  gap: 20px;
+
+  margin-bottom: 18px;
+}
+
+.bids-header h1 {
+  margin: 0;
+
+  font-size: 24px;
+  font-weight: 700;
+
+  line-height: 1.3;
+}
+
+.bids-header p {
+  margin: 4px 0 0;
+
+  font-size: 14px;
+  color: #333;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  margin-top: 5px;
+
+  font-size: 14px;
+
+  white-space: nowrap;
+}
+
+.breadcrumb span {
+  color: #8c8ca1;
+}
+
+.breadcrumb b {
+  color: #aaa;
+  font-size: 14px;
+}
+
+.breadcrumb strong {
+  color: #777;
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   STATISTICS
+========================================================= */
+
+.bid-stats {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 14px;
+
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  width: 100%;
+  min-width: 0;
+
+  height: 96px;
+
+  background: #fff;
+
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 0 14px;
+
+  box-sizing: border-box;
+}
+
+.stat-icon {
+  width: 55px;
+  height: 55px;
+
+  min-width: 55px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #fff;
+
+  font-size: 14px;
+
+  flex-shrink: 0;
+}
+
+.stat-icon.purple {
+  background: #7247ee;
+}
+
+.stat-icon.green {
+  background: #4bbb22;
+}
+
+.stat-icon.yellow {
+  background: #ffd329;
+}
+
+.stat-icon.red {
+  background: #e52e48;
+}
+
+.stat-card > div:last-child {
+  min-width: 0;
+}
+
+.stat-card h3 {
+  margin: 0 0 3px;
+
+  font-size: 24px;
+  font-weight: 700;
+
+  line-height: 1.2;
+}
+
+.stat-card p {
+  margin: 0;
+
+  font-size: 14px;
+
+  color: #999;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   ACTIVE BIDS HEADER
+========================================================= */
+
+.active-bids-header {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 15px;
+
+  margin-top: 50px;
+  margin-bottom: 15px;
+}
+
+.active-bids-header h2 {
+  margin: 0;
+
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.place-bid-btn {
+  width: 144px;
+  height: 40px;
+
+  flex-shrink: 0;
+
+  border: none;
+
+  background: #7346ee;
+  color: #fff;
+
+  border-radius: 6px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.place-bid-btn:hover {
+  background: #6033d8;
+}
+
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.bids-table {
+  width: 100%;
+  min-width: 0;
+}
+
+
+/* =========================================================
+   TABLE HEADER
+========================================================= */
+
+.table-header {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    40px
+    minmax(160px, 1.5fr)
+    minmax(80px, 0.8fr)
+    minmax(80px, 0.8fr)
+    minmax(110px, 1fr)
+    minmax(120px, 1fr)
+    45px;
+
+  align-items: center;
+
+  min-height: 32px;
+
+  padding: 0 7px;
+
+  box-sizing: border-box;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  color: #222;
+}
+
+.table-header > div {
+  min-width: 0;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.table-header .check {
+  text-align: center;
+}
+
+
+/* =========================================================
+   BID LIST
+========================================================= */
+
+.bid-list {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+
+  margin-top: 20px;
+}
+
+
+/* =========================================================
+   BID ROW
+========================================================= */
+
+.bid-row {
+  width: 100%;
+  min-width: 0;
+
+  display: grid;
+
+  grid-template-columns:
+    40px
+    minmax(160px, 1.5fr)
+    minmax(80px, 0.8fr)
+    minmax(80px, 0.8fr)
+    minmax(110px, 1fr)
+    minmax(120px, 1fr)
+    45px;
+
+  align-items: center;
+
+  min-height: 60px;
+
+  padding: 0 7px;
+
+  box-sizing: border-box;
+
+  background: #fff;
+
+  border-radius: 12px;
+
+  font-size: 16px;
+
+  color: #222;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   CHECKBOX
+========================================================= */
+
+.check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 0;
+}
+
+.check input {
+  width: 12px;
+  height: 12px;
+
+  margin: 0;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   ITEM
+========================================================= */
+
+.item-info {
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  overflow: hidden;
+}
+
+.nft-image {
+  width: 65px;
+  height: 44px;
+
+  min-width: 65px;
+
+  object-fit: cover;
+
+  border-radius: 10px;
+
+  flex-shrink: 0;
+}
+
+.item-details {
+  min-width: 0;
+
+  overflow: hidden;
+}
+
+.item-details h4 {
+  margin: 0 0 3px;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+.item-details p {
+  margin: 0;
+
+  font-size: 14px;
+
+  color: #222;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+
+/* =========================================================
+   PRICE
+========================================================= */
+
+.price {
+  min-width: 0;
+
+  font-size: 12px;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+.mobile-label {
+  display: none;
+}
+
+
+/* =========================================================
+   RECENT OFFER
+========================================================= */
+
+.recent-offer {
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  font-size: 12px;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+}
+
+.profile-small {
+  width: 43px;
+  height: 43px;
+
+  min-width: 43px;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+}
+
+
+/* =========================================================
+   TIME
+========================================================= */
+
+.time {
+  min-width: 0;
+
+  font-size: 12px;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+
+/* =========================================================
+   ACTION
+========================================================= */
+
+.action {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.action button {
+  width: 22px;
+  height: 22px;
+
+  border: none;
+
+  background: transparent;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  font-size: 12px;
+
+  color: #111;
+}
+
+.action button:hover {
+  color: #e52e48;
+}
+
+/* =========================================================
+   RESPONSIVE BIDS PAGE
+   1440px DESIGN REMAINS UNCHANGED
+========================================================= */
+
+
+/* =========================================================
+   RESPONSIVE BIDS PAGE
+   1440px DESIGN REMAINS COMPLETELY UNCHANGED
+========================================================= */
+
+
+/* =========================================================
+   1200px - SMALL DESKTOP / LAPTOP
+========================================================= */
+
+@media (max-width: 1200px) {
+
+  .bids-page {
+    width: calc(100% - 120px);
+    margin-left: 120px;
+
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .bid-stats {
+    gap: 10px;
+  }
+
+  .stat-card {
+    gap: 10px;
+    padding: 0 10px;
+  }
+
+  .stat-icon {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+  }
+
+  .stat-card h3 {
+    font-size: 20px;
+  }
+
+  .stat-card p {
+    font-size: 12px;
+  }
+}
+
+
+/* =========================================================
+   1024px - TABLET / LAPTOP
+========================================================= */
+
+@media (max-width: 1024px) {
+
+  .bids-page {
+    width: calc(100% - 80px);
+    margin-left: 80px;
+    margin-top: 70px;
+
+    padding: 25px 20px 40px;
+  }
+
+
+  /* HEADER */
+
+  .bids-header {
+    margin-bottom: 20px;
+  }
+
+  .bids-header h1 {
+    font-size: 22px;
+  }
+
+  .bids-header p {
+    font-size: 13px;
+  }
+
+  .breadcrumb {
+    font-size: 12px;
+  }
+
+
+  /* STATISTICS */
+
+  .bid-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .stat-card {
+    height: 82px;
+    padding: 0 14px;
+    gap: 12px;
+  }
+
+  .stat-icon {
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+  }
+
+  .stat-card h3 {
+    font-size: 20px;
+  }
+
+  .stat-card p {
+    font-size: 11px;
+  }
+
+
+  /* ACTIVE BIDS */
+
+  .active-bids-header {
+    margin-top: 35px;
+  }
+
+  .active-bids-header h2 {
+    font-size: 21px;
+  }
+
+  .place-bid-btn {
+    width: 130px;
+    height: 38px;
+    font-size: 12px;
+  }
+
+
+  /* TABLE */
+
+  .table-header,
+  .bid-row {
+    grid-template-columns:
+      30px
+      minmax(140px, 1.5fr)
+      80px
+      80px
+      100px
+      105px
+      35px;
+  }
+
+  .table-header {
+    font-size: 11px;
+  }
+
+  .bid-row {
+    min-height: 58px;
+  }
+
+
+  /* IMAGE */
+
+  .nft-image {
+    width: 48px;
+    height: 35px;
+    min-width: 48px;
+  }
+
+
+  /* ITEM */
+
+  .item-details h4 {
+    font-size: 13px;
+  }
+
+  .item-details p {
+    font-size: 11px;
+  }
+
+
+  /* OTHER COLUMNS */
+
+  .recent-offer {
+    font-size: 10px;
+  }
+
+  .profile-small {
+    width: 34px;
+    height: 34px;
+    min-width: 34px;
+  }
+
+  .price,
+  .time {
+    font-size: 10px;
+  }
+}
+
+
+/* =========================================================
+   900px - SMALL TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .bids-page {
+    width: calc(100% - 60px);
+    margin-left: 60px;
+  }
+
+  .table-header,
+  .bid-row {
+    grid-template-columns:
+      28px
+      minmax(120px, 1.5fr)
+      75px
+      75px
+      95px
+      95px
+      32px;
+  }
+
+  .table-header {
+    font-size: 10px;
+  }
+
+  .bid-row {
+    font-size: 14px;
+  }
+
+}
+
+
+/* =========================================================
+   768px - TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .bids-page {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 70px;
+
+    padding: 20px 18px 40px;
+  }
+
+
+  /* HEADER */
+
+  .bids-header {
+    margin-bottom: 18px;
+  }
+
+  .bids-header h1 {
+    font-size: 20px;
+  }
+
+  .bids-header p {
+    font-size: 12px;
+  }
+
+  .breadcrumb {
+    font-size: 11px;
+  }
+
+
+  /* STATISTICS */
+
+  .bid-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .stat-card {
+    height: 75px;
+    padding: 0 12px;
+    gap: 10px;
+  }
+
+  .stat-icon {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+  }
+
+  .stat-card h3 {
+    font-size: 18px;
+  }
+
+  .stat-card p {
+    font-size: 10px;
+  }
+
+
+  /* ACTIVE HEADER */
+
+  .active-bids-header {
+    margin-top: 30px;
+    margin-bottom: 14px;
+  }
+
+  .active-bids-header h2 {
+    font-size: 20px;
+  }
+
+  .place-bid-btn {
+    width: 120px;
+    height: 36px;
+    font-size: 11px;
+  }
+
+
+  /* TABLE */
+
+  .bids-table {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .table-header,
+  .bid-row {
+    grid-template-columns:
+      25px
+      minmax(120px, 1fr)
+      70px
+      75px
+      90px
+      90px
+      30px;
+  }
+
+  .table-header {
+    font-size: 10px;
+    padding: 0 5px;
+  }
+
+  .bid-row {
+    min-height: 58px;
+    padding: 5px;
+  }
+
+
+  /* IMAGE */
+
+  .nft-image {
+    width: 44px;
+    height: 34px;
+    min-width: 44px;
+  }
+
+  .item-info {
+    gap: 6px;
+  }
+
+
+  /* ITEM */
+
+  .item-details h4 {
+    font-size: 11px;
+  }
+
+  .item-details p {
+    font-size: 9px;
+  }
+
+
+  /* OFFER */
+
+  .recent-offer {
+    font-size: 9px;
+  }
+
+  .profile-small {
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+  }
+
+  .price,
+  .time {
+    font-size: 9px;
+  }
+}
+
+
+/* =========================================================
+   600px - MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .bids-page {
+    width: 100%;
+    margin: 0;
+
+    padding: 75px 15px 30px;
+
+    overflow-x: hidden;
+  }
+
+
+  /* HEADER */
+
+  .bids-header {
+    width: 100%;
+    margin-bottom: 18px;
+  }
+
+  .bids-header h1 {
+    font-size: 19px;
+  }
+
+  .bids-header p {
+    font-size: 10px;
+  }
+
+  .breadcrumb {
+    display: none;
+  }
+
+
+  /* =======================================================
+     STATISTICS
+  ======================================================= */
+
+  .bid-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin-bottom: 25px;
+  }
+
+  .stat-card {
+    height: 68px;
+    padding: 0 10px;
+    gap: 8px;
+    border-radius: 10px;
+  }
+
+  .stat-icon {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+
+    font-size: 10px;
+  }
+
+  .stat-card h3 {
+    font-size: 14px;
+  }
+
+  .stat-card p {
+    font-size: 8px;
+  }
+
+
+  /* =======================================================
+     ACTIVE BIDS HEADER
+  ======================================================= */
+
+  .active-bids-header {
+    margin-top: 25px;
+    margin-bottom: 14px;
+    gap: 8px;
+  }
+
+  .active-bids-header h2 {
+    font-size: 17px;
+  }
+
+  .place-bid-btn {
+    width: 105px;
+    height: 32px;
+
+    padding: 0 8px;
+
+    font-size: 9px;
+  }
+
+
+  /* =======================================================
+     MOBILE TABLE HEADER
+  ======================================================= */
+
+  .table-header {
+    display: grid;
+
+    grid-template-columns:
+      22px
+      minmax(0, 1fr)
+      70px
+      40px;
+
+    min-height: 30px;
+
+    padding: 0 5px;
+
+    font-size: 8px;
+  }
+
+
+  /* CHECKBOX */
+
+  .table-header > div:nth-child(1) {
+    display: flex;
+  }
+
+
+  /* ITEM */
+
+  .table-header > div:nth-child(2) {
+    display: block;
+  }
+
+
+  /* YOUR OFFER */
+
+  .table-header > div:nth-child(3) {
+    display: block;
+    text-align: center;
+  }
+
+
+  /* TIME */
+
+  .table-header > div:nth-child(4) {
+    display: block;
+    text-align: center;
+  }
+
+
+  /* HIDE EXTRA DESKTOP COLUMNS */
+
+  .table-header > div:nth-child(5),
+  .table-header > div:nth-child(6) {
+    display: none;
+  }
+
+
+  /* ACTION */
+
+  .table-header > div:nth-child(7) {
+    display: block;
+    text-align: center;
+  }
+
+
+  /* =======================================================
+     BID LIST
+  ======================================================= */
+
+  .bid-list {
+    gap: 9px;
+    margin-top: 10px;
+  }
+
+
+  /* =======================================================
+     BID ROW
+  ======================================================= */
+
+  .bid-row {
+    display: grid;
+
+    grid-template-columns:
+      22px
+      minmax(0, 1fr)
+      70px
+      40px;
+
+    min-height: 68px;
+
+    padding: 7px 5px;
+
+    border-radius: 11px;
+  }
+
+
+  /* HIDE DESKTOP-ONLY DATA */
+
+  .bid-row > .price:first-of-type,
+  .bid-row > .recent-offer {
+    display: none;
+  }
+
+
+  /* =======================================================
+     ITEM
+  ======================================================= */
+
+  .item-info {
+    min-width: 0;
+
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+  }
+
+  .nft-image {
+    width: 43px;
+    height: 40px;
+    min-width: 43px;
+
+    border-radius: 8px;
+  }
+
+  .item-details {
+    min-width: 0;
+  }
+
+  .item-details h4 {
+    font-size: 10px;
+    margin-bottom: 3px;
+  }
+
+  .item-details p {
+    font-size: 8px;
+  }
+
+
+  /* =======================================================
+     YOUR OFFER
+  ======================================================= */
+
+  .bid-row > .price:nth-of-type(2) {
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 3px;
+
+    font-size: 8px;
+
+    text-align: center;
+
+    white-space: normal;
+  }
+
+  .mobile-label {
+    display: block;
+
+    margin-bottom: 1px;
+
+    font-size: 7px;
+
+    color: #999;
+  }
+
+
+  /* =======================================================
+     TIME
+  ======================================================= */
+
+  .time {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 2px;
+
+    font-size: 7px;
+
+    line-height: 1.2;
+
+    text-align: center;
+
+    white-space: normal;
+  }
+
+
+  /* =======================================================
+     ACTION
+  ======================================================= */
+
+  .action button {
+    width: 24px;
+    height: 24px;
+
+    font-size: 9px;
+  }
+}
+
+
+/* =========================================================
+   480px - SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .bids-page {
+    padding: 75px 12px 30px;
+  }
+
+
+  /* HEADER */
+
+  .bids-header h1 {
+    font-size: 18px;
+  }
+
+  .bids-header p {
+    font-size: 9px;
+  }
+
+
+  /* STATISTICS */
+
+  .bid-stats {
+    gap: 8px;
+  }
+
+  .stat-card {
+    height: 64px;
+    padding: 0 8px;
+    gap: 7px;
+  }
+
+  .stat-icon {
+    width: 33px;
+    height: 33px;
+    min-width: 33px;
+  }
+
+  .stat-card h3 {
+    font-size: 13px;
+  }
+
+  .stat-card p {
+    font-size: 7px;
+  }
+
+
+  /* ACTIVE */
+
+  .active-bids-header {
+    margin-top: 24px;
+  }
+
+  .active-bids-header h2 {
+    font-size: 16px;
+  }
+
+  .place-bid-btn {
+    width: 100px;
+    height: 30px;
+    font-size: 8px;
+  }
+
+
+  /* TABLE */
+
+  .table-header {
+    grid-template-columns:
+      20px
+      minmax(0, 1fr)
+      64px
+      36px;
+
+    font-size: 7px;
+  }
+
+  .bid-row {
+    grid-template-columns:
+      20px
+      minmax(0, 1fr)
+      64px
+      36px;
+
+    min-height: 65px;
+
+    padding: 6px 4px;
+  }
+
+
+  /* IMAGE */
+
+  .nft-image {
+    width: 40px;
+    height: 38px;
+    min-width: 40px;
+  }
+
+  .item-info {
+    gap: 6px;
+  }
+
+
+  /* TEXT */
+
+  .item-details h4 {
+    font-size: 9px;
+  }
+
+  .item-details p {
+    font-size: 7px;
+  }
+
+
+  /* OFFER */
+
+  .bid-row > .price:nth-of-type(2) {
+    font-size: 7px;
+  }
+
+  .mobile-label {
+    font-size: 6px;
+  }
+
+
+  /* TIME */
+
+  .time {
+    font-size: 6.5px;
+  }
+
+
+  /* ACTION */
+
+  .action button {
+    width: 22px;
+    height: 22px;
+
+    font-size: 8px;
+  }
+}
+
+
+/* =========================================================
+   375px - EXTRA SMALL MOBILE
+========================================================= */
+
+@media (max-width: 375px) {
+
+  .bids-page {
+    padding: 70px 10px 25px;
+  }
+
+
+  /* HEADER */
+
+  .bids-header h1 {
+    font-size: 18px;
+  }
+
+  .bids-header p {
+    font-size: 8px;
+  }
+
+
+  /* STATISTICS */
+
+  .bid-stats {
+    gap: 7px;
+  }
+
+  .stat-card {
+    height: 61px;
+    padding: 0 7px;
+    gap: 6px;
+  }
+
+  .stat-icon {
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+  }
+
+  .stat-card h3 {
+    font-size: 12px;
+  }
+
+  .stat-card p {
+    font-size: 6.5px;
+  }
+
+
+  /* ACTIVE */
+
+  .active-bids-header {
+    margin-top: 22px;
+    margin-bottom: 12px;
+  }
+
+  .active-bids-header h2 {
+    font-size: 14px;
+  }
+
+  .place-bid-btn {
+    width: 92px;
+    height: 28px;
+    font-size: 7px;
+  }
+
+
+  /* TABLE HEADER */
+
+  .table-header {
+    grid-template-columns:
+      18px
+      minmax(0, 1fr)
+      58px
+      32px;
+
+    min-height: 28px;
+
+    font-size: 6.5px;
+  }
+
+
+  /* BID ROW */
+
+  .bid-row {
+    grid-template-columns:
+      18px
+      minmax(0, 1fr)
+      58px
+      32px;
+
+    min-height: 62px;
+
+    padding: 6px 4px;
+
+    border-radius: 10px;
+  }
+
+
+  /* CHECKBOX */
+
+  .check input {
+    width: 10px;
+    height: 10px;
+  }
+
+
+  /* IMAGE */
+
+  .nft-image {
+    width: 36px;
+    height: 35px;
+    min-width: 36px;
+
+    border-radius: 7px;
+  }
+
+  .item-info {
+    gap: 5px;
+  }
+
+
+  /* ITEM */
+
+  .item-details h4 {
+    font-size: 8px;
+  }
+
+  .item-details p {
+    font-size: 6.5px;
+  }
+
+
+  /* OFFER */
+
+  .bid-row > .price:nth-of-type(2) {
+    font-size: 6.5px;
+  }
+
+  .mobile-label {
+    font-size: 5.5px;
+  }
+
+
+  /* TIME */
+
+  .time {
+    font-size: 6px;
+  }
+
+
+  /* ACTION */
+
+  .action button {
+    width: 20px;
+    height: 20px;
+
+    font-size: 8px;
+  }
+}
+
+
+/* =========================================================
+   360px - VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .bids-page {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .bid-stats {
+    gap: 6px;
+  }
+
+  .stat-card {
+    padding: 0 6px;
+  }
+
+  .stat-icon {
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+  }
+
+  .stat-card h3 {
+    font-size: 11px;
+  }
+
+  .stat-card p {
+    font-size: 6px;
+  }
+
+  .active-bids-header h2 {
+    font-size: 13px;
+  }
+
+  .place-bid-btn {
+    width: 88px;
+    height: 27px;
+    font-size: 6.5px;
+  }
+
+  .table-header {
+    grid-template-columns:
+      17px
+      minmax(0, 1fr)
+      55px
+      29px;
+  }
+
+  .bid-row {
+    grid-template-columns:
+      17px
+      minmax(0, 1fr)
+      55px
+      29px;
+
+    min-height: 59px;
+  }
+
+  .nft-image {
+    width: 34px;
+    height: 33px;
+    min-width: 34px;
+  }
+
+  .item-details h4 {
+    font-size: 7px;
+  }
+
+  .item-details p {
+    font-size: 6px;
+  }
+
+  .bid-row > .price:nth-of-type(2) {
+    font-size: 6px;
+  }
+
+  .mobile-label {
+    font-size: 5px;
+  }
+
+  .time {
+    font-size: 5.5px;
+  }
+
+  .action button {
+    width: 19px;
+    height: 19px;
+  }
+}

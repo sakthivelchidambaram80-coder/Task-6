@@ -1,0 +1,725 @@
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+.favorites-section {
+  width: calc(100% - 149px);
+  max-width: 1220px;
+  margin-left: 149px;
+  margin-top: 100px;
+  padding: 0;
+  background: #f7f7f8;
+  color: #171717;
+  font-family: "Poppins", Arial, sans-serif;
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   BREADCRUMB
+========================================================= */
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 5px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.breadcrumb span {
+  color: #8c8ca1;
+}
+
+.breadcrumb b {
+  color: #aaa;
+  font-size: 14px;
+}
+
+.breadcrumb strong {
+  color: #777;
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   FAVORITES HEADER
+========================================================= */
+
+.favorites-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 30px;
+  min-width: 0;
+}
+
+.favorites-header h2 {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.3;
+  font-weight: 700;
+  color: #111111;
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   FILTER TABS
+========================================================= */
+
+.favorites-filter-tabs {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  min-width: 0;
+}
+
+.favorites-filter-tabs button {
+  flex-shrink: 0;
+  background: transparent;
+  border: none;
+  color: #111111;
+  padding: 6px 15px;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.favorites-filter-tabs button:hover {
+  background: #eeeaff;
+}
+
+.favorites-filter-tabs .favorites-filter-active {
+  background: #7048f8;
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   NFT GRID
+========================================================= */
+
+.favorites-nft-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  align-items: start;
+}
+
+
+/* =========================================================
+   NFT CARD
+========================================================= */
+
+.favorites-nft-card {
+  width: 100%;
+  min-width: 0;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 18px;
+  overflow: hidden;
+  box-sizing: border-box;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.favorites-nft-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.07);
+}
+
+
+/* =========================================================
+   NFT IMAGE
+========================================================= */
+
+.favorites-nft-image-wrapper {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 17px;
+}
+
+.favorites-nft-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 0.82;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.favorites-nft-card:hover .favorites-nft-image {
+  transform: scale(1.04);
+}
+
+
+/* =========================================================
+   NFT DETAILS
+========================================================= */
+
+.favorites-nft-details {
+  width: 100%;
+  min-width: 0;
+  padding-top: 22px;
+}
+
+.favorites-nft-details h3 {
+  margin: 0 0 18px;
+  color: #111111;
+  font-size: 18px;
+  line-height: 1.3;
+  font-weight: 700;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   NFT INFO
+========================================================= */
+
+.favorites-nft-info {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 10px;
+  min-width: 0;
+}
+
+.favorites-auction,
+.favorites-current-bid {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.favorites-auction span,
+.favorites-current-bid span {
+  min-width: 0;
+  color: #222222;
+  font-size: 12px;
+  line-height: 1.3;
+}
+
+.favorites-auction strong,
+.favorites-current-bid strong {
+  min-width: 0;
+  color: #68799f;
+  font-size: 13px;
+  line-height: 1.3;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.favorites-current-bid {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.favorites-current-bid .favorites-purple-text {
+  color: #7048f8;
+}
+
+
+/* =========================================================
+   PLACE BID BUTTON
+========================================================= */
+
+.favorites-place-bid {
+  display: block;
+  width: 100%;
+  height: 40px;
+  margin-top: 25px;
+  padding: 0 12px;
+  border: none;
+  border-radius: 8px;
+  background: #7048f8;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.favorites-place-bid:hover {
+  background: #6038e8;
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   1200px
+========================================================= */
+
+@media (max-width: 1200px) {
+
+  .favorites-section {
+    width: calc(100% - 110px);
+    margin-left: 100px;
+  }
+
+  .favorites-nft-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+  }
+}
+
+
+/* =========================================================
+   1024px - TABLET / SMALL LAPTOP
+========================================================= */
+
+@media (max-width: 1024px) {
+
+  .favorites-section {
+    width: calc(100% - 105px);
+    margin-left: 40px;
+    margin-top: 60px;
+  }
+
+  .favorites-header {
+    margin-bottom: 25px;
+  }
+
+  .favorites-header h2 {
+    font-size: 19px;
+  }
+
+  .favorites-filter-tabs {
+    gap: 3px;
+  }
+
+  .favorites-filter-tabs button {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+
+  .favorites-nft-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .favorites-nft-card {
+    padding: 15px;
+    border-radius: 16px;
+  }
+
+  .favorites-nft-image-wrapper {
+    border-radius: 14px;
+  }
+
+  .favorites-nft-details {
+    padding-top: 17px;
+  }
+
+  .favorites-nft-details h3 {
+    font-size: 16px;
+    margin-bottom: 14px;
+  }
+
+  .favorites-auction span,
+  .favorites-current-bid span {
+    font-size: 11px;
+  }
+
+  .favorites-auction strong,
+  .favorites-current-bid strong {
+    font-size: 12px;
+  }
+
+  .favorites-place-bid {
+    margin-top: 20px;
+  }
+}
+
+
+/* =========================================================
+   768px - TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .favorites-section {
+    width: calc(100% - 95px);
+    margin-left: 40px;
+    margin-top: 40px;
+  }
+
+  .favorites-header {
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 22px;
+  }
+
+  .favorites-header h2 {
+    font-size: 18px;
+  }
+
+  .favorites-filter-tabs {
+    max-width: 65%;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .favorites-filter-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .favorites-filter-tabs button {
+    padding: 6px 11px;
+    font-size: 12px;
+  }
+
+  .favorites-nft-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .favorites-nft-card {
+    padding: 14px;
+    border-radius: 15px;
+  }
+
+  .favorites-nft-details {
+    padding-top: 15px;
+  }
+
+  .favorites-nft-details h3 {
+    font-size: 16px;
+    margin-bottom: 13px;
+  }
+}
+
+
+/* =========================================================
+   600px - MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .favorites-section {
+    width: calc(100% - 90px);
+    margin-left:40px;
+    margin-top: 30px;
+  }
+
+  .favorites-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 20px;
+  }
+
+  .favorites-header h2 {
+    font-size: 18px;
+  }
+
+  .favorites-filter-tabs {
+    width: 100%;
+    max-width: 100%;
+    justify-content: flex-start;
+    overflow-x: auto;
+  }
+
+  .favorites-filter-tabs button {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  .favorites-nft-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .favorites-nft-card {
+    width: 100%;
+    padding: 14px;
+  }
+
+  .favorites-nft-image {
+    aspect-ratio: 1 / 0.75;
+  }
+
+  .favorites-nft-details {
+    padding-top: 17px;
+  }
+
+  .favorites-nft-details h3 {
+    font-size: 17px;
+    margin-bottom: 15px;
+  }
+
+  .favorites-auction span,
+  .favorites-current-bid span {
+    font-size: 11px;
+  }
+
+  .favorites-auction strong,
+  .favorites-current-bid strong {
+    font-size: 13px;
+  }
+
+  .favorites-place-bid {
+    height: 42px;
+    line-height: 42px;
+    margin-top: 20px;
+  }
+}
+
+
+/* =========================================================
+   480px
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .favorites-section {
+    width: calc(100% - 90px);
+    margin-left:40px;
+    margin-top: 25px;
+  }
+
+  .breadcrumb {
+    font-size: 11px;
+    gap: 5px;
+  }
+
+  .breadcrumb b {
+    font-size: 11px;
+  }
+
+  .favorites-header {
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+
+  .favorites-header h2 {
+    font-size: 17px;
+  }
+
+  .favorites-filter-tabs {
+    gap: 3px;
+  }
+
+  .favorites-filter-tabs button {
+    padding: 6px 10px;
+    font-size: 11px;
+  }
+
+  .favorites-nft-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .favorites-nft-card {
+    padding: 12px;
+    border-radius: 14px;
+  }
+
+  .favorites-nft-image-wrapper {
+    border-radius: 12px;
+  }
+
+  .favorites-nft-image {
+    aspect-ratio: 1 / 0.76;
+  }
+
+  .favorites-nft-details {
+    padding-top: 14px;
+  }
+
+  .favorites-nft-details h3 {
+    font-size: 16px;
+    margin-bottom: 13px;
+  }
+
+  .favorites-nft-info {
+    gap: 8px;
+  }
+
+  .favorites-auction,
+  .favorites-current-bid {
+    gap: 5px;
+  }
+
+  .favorites-auction span,
+  .favorites-current-bid span {
+    font-size: 10px;
+  }
+
+  .favorites-auction strong,
+  .favorites-current-bid strong {
+    font-size: 12px;
+  }
+
+  .favorites-place-bid {
+    height: 40px;
+    line-height: 40px;
+    margin-top: 18px;
+    font-size: 13px;
+  }
+}
+
+
+/* =========================================================
+   375px - MOBILE
+========================================================= */
+
+@media (max-width: 375px) {
+
+  .favorites-section {
+    width: calc(100% - 60px);
+    margin-left: 40px;
+    margin-top: 20px;
+  }
+
+  .breadcrumb {
+    font-size: 10px;
+    gap: 4px;
+  }
+
+  .breadcrumb b {
+    font-size: 10px;
+  }
+
+  .favorites-header {
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  .favorites-header h2 {
+    font-size: 16px;
+  }
+
+  .favorites-filter-tabs {
+    width: 100%;
+    gap: 2px;
+  }
+
+  .favorites-filter-tabs button {
+    padding: 5px 9px;
+    font-size: 10px;
+  }
+
+  .favorites-nft-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .favorites-nft-card {
+    width: 100%;
+    padding: 10px;
+    border-radius: 13px;
+  }
+
+  .favorites-nft-image-wrapper {
+    width: 100%;
+    border-radius: 11px;
+  }
+
+  .favorites-nft-image {
+    width: 100%;
+    aspect-ratio: 1 / 0.78;
+    object-fit: cover;
+  }
+
+  .favorites-nft-details {
+    padding-top: 13px;
+  }
+
+  .favorites-nft-details h3 {
+    margin-bottom: 12px;
+    font-size: 15px;
+  }
+
+  .favorites-nft-info {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 6px;
+  }
+
+  .favorites-auction,
+  .favorites-current-bid {
+    gap: 4px;
+  }
+
+  .favorites-auction span,
+  .favorites-current-bid span {
+    font-size: 9px;
+  }
+
+  .favorites-auction strong,
+  .favorites-current-bid strong {
+    font-size: 11px;
+  }
+
+  .favorites-place-bid {
+    width: 100%;
+    height: 38px;
+    margin-top: 17px;
+    padding: 0 8px;
+    font-size: 12px;
+    line-height: 38px;
+    border-radius: 7px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL DEVICES
+========================================================= */
+
+@media (max-width: 340px) {
+
+  .favorites-section {
+    width: calc(100% - 86px);
+    margin-left: 76px;
+  }
+
+  .favorites-nft-card {
+    padding: 9px;
+  }
+
+  .favorites-filter-tabs button {
+    padding: 5px 8px;
+    font-size: 9px;
+  }
+
+  .favorites-nft-details h3 {
+    font-size: 14px;
+  }
+
+  .favorites-auction span,
+  .favorites-current-bid span {
+    font-size: 8px;
+  }
+
+  .favorites-auction strong,
+  .favorites-current-bid strong {
+    font-size: 10px;
+  }
+}
